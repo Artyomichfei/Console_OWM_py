@@ -2,7 +2,7 @@ from pyowm import OWM
 
 
 
-location = input("Введите локацию для запроса погоды:")
+location = "Aachen,DE" #input("Введите локацию для запроса погоды:")
 
 with open("api_key", "r") as file:
     weather_api_key = file.read()
@@ -22,4 +22,4 @@ except:
 
 status = now.weather.detailed_status
 temperature = int(now.weather.temperature('celsius')["temp"])
-print("Сейчас за окном:", status, "Температура:", temperature)
+print("Сейчас за окном:", status,  "\nТемпература:", temperature)
